@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, useSpring, useInView } from "framer-motion";
-import { Stethoscope, HeartPulse, Activity, ArrowRight, Award, GraduationCap, ShieldCheck } from "lucide-react";
+import { Stethoscope, HeartPulse, Activity, ArrowRight, Award, GraduationCap, ShieldCheck, ClipboardCheck } from "lucide-react";
 import Image from "next/image";
 
 // CountUp Component for Stats
@@ -118,9 +118,18 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
             >
+              <a 
+                href="https://test.tibbiy-malaka.uz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white font-black uppercase tracking-widest text-xs rounded-xl hover:shadow-lg hover:shadow-teal-500/30 transition-all flex items-center justify-center gap-3 active:scale-[0.98]"
+              >
+                <ClipboardCheck className="w-5 h-5" />
+                Kirish testini topshirish
+              </a>
               <button 
                 onClick={scrollToContact}
-                className="px-10 py-5 bg-gradient-to-r from-teal-600 to-teal-500 text-white font-black uppercase tracking-widest text-xs rounded-2xl shadow-2xl shadow-teal-900/40 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3"
+                className="px-8 py-4 bg-white/5 border border-white/10 text-white font-black uppercase tracking-widest text-xs rounded-xl transition-all hover:bg-white/10 active:scale-[0.98] flex items-center justify-center gap-3"
               >
                 Konsultatsiya olish
                 <ArrowRight size={18} />

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LogIn, Menu, X } from "lucide-react";
+import { LogIn, Menu, X, ClipboardCheck } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,6 +65,15 @@ const Navbar = () => {
           {/* Action Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <a 
+              href="https://test.tibbiy-malaka.uz" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-teal-500/30 transition-all duration-300 flex items-center gap-2"
+            >
+              <ClipboardCheck className="w-4 h-4" />
+              KIRISH TESTI
+            </a>
+            <a 
               href="https://admin.tibbiy-malaka.uz"
               target="_blank" 
               rel="noopener noreferrer"
@@ -104,6 +113,15 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="pt-6 space-y-4">
+            <a 
+              href="https://test.tibbiy-malaka.uz" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 w-full py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white font-black uppercase tracking-widest text-xs rounded-xl shadow-lg shadow-teal-500/20"
+            >
+              <ClipboardCheck className="w-5 h-5" />
+              KIRISH TESTI
+            </a>
             <a 
               href="https://admin.tibbiy-malaka.uz"
               target="_blank" 
