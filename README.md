@@ -36,7 +36,6 @@ src/
 │   ├── Navbar.tsx
 │   ├── Hero.tsx
 │   ├── Courses.tsx
-│   ├── EntranceTest.tsx
 │   ├── Infrastructure.tsx
 │   ├── License.tsx
 │   ├── Team.tsx

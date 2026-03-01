@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ClipboardCheck, LogIn, Menu, X } from "lucide-react";
+import { LogIn, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,15 +35,11 @@ const Navbar = () => {
           
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 overflow-hidden rounded-lg border border-[#C5A059]/30 shadow-lg group-hover:border-[#C5A059] transition-all">
-              <Image
-                src="/logo.jpg"
+            <div className="relative h-10 w-auto">
+              <img 
+                src="/images/MALAKA_LOGO.png" 
                 alt="TIBBIY MALAKA Logo"
-                fill
-                className="object-cover"
-                onError={(e) => {
-                  (e.target as any).src = "https://placehold.co/400x400/0B1120/C5A059?text=TM";
-                }}
+                className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <span className="text-xl font-black tracking-tighter text-white group-hover:text-[#C5A059] transition-colors">
@@ -68,16 +64,6 @@ const Navbar = () => {
 
           {/* Action Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <a 
-              href="https://test.tibbiy-malaka.uz" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white text-xs font-black uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-teal-500/30 transition-all duration-300 flex items-center gap-2 active:scale-95"
-            >
-              <ClipboardCheck size={16} />
-              Kirish testi
-            </a>
-            
             <a 
               href="https://admin.tibbiy-malaka.uz"
               target="_blank" 
@@ -118,15 +104,6 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="pt-6 space-y-4">
-            <a 
-              href="https://test.tibbiy-malaka.uz" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 w-full py-4 bg-teal-600 text-white font-black uppercase tracking-widest text-xs rounded-xl"
-            >
-              <ClipboardCheck size={18} />
-              Kirish testi
-            </a>
             <a 
               href="https://admin.tibbiy-malaka.uz"
               target="_blank" 

@@ -27,11 +27,13 @@ const Footer = () => {
           {/* Column 1: Logo & About */}
           <div className="space-y-8">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-lg shadow-teal-900/20">
-                <Award size={24} />
-              </div>
-              <h3 className="text-white font-black text-2xl tracking-tighter">
-                TIBBIY <span className="text-teal-500">MALAKA</span>
+              <img 
+                src="/MALAKA LOGO 1.png" 
+                alt="TIBBIY MALAKA Logo" 
+                className="h-10 w-auto object-contain"
+              />
+              <h3 className="text-xl font-bold tracking-tighter">
+                <span className="text-white">TIBBIY</span> <span className="text-teal-400">MALAKA</span>
               </h3>
             </div>
             <p className="text-sm leading-relaxed text-slate-500 max-w-xs">

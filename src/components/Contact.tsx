@@ -98,7 +98,7 @@ const Contact = ({ selectedDirection }: ContactProps) => {
                 viewport={{ once: true }}
                 className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 text-teal-700 text-[10px] font-black uppercase tracking-widest"
               >
-                <MessageCircle size={14} /> Qabul ochiq
+                <MessageCircle size={14} /> Qabul boshlandi
               </motion.div>
               
               <motion.h2 
@@ -156,8 +156,8 @@ const Contact = ({ selectedDirection }: ContactProps) => {
                 <GraduationCap size={24} />
               </div>
               <div>
-                <p className="text-sm font-bold text-slate-900">500+ bitiruvchilar</p>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">2026-yildan buyon</p>
+                <p className="text-sm font-bold text-slate-900">Joylar soni</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">cheklangan</p>
               </div>
             </motion.div>
           </div>

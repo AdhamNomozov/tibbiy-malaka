@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Courses from "@/components/Courses";
-import EntranceTest from "@/components/EntranceTest";
 import Gallery from "@/components/Gallery";
 import License from "@/components/License";
 import Team from "@/components/Team";
@@ -33,7 +32,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Courses onOpenModal={handleOpenModal} />
-      <EntranceTest />
       <Gallery />
       <License />
       <Team />

@@ -111,10 +111,10 @@ const Team = () => {
               {/* Director Content */}
               <div className="flex-1 space-y-6 text-center md:text-left">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[10px] font-black uppercase tracking-widest">
-                  Markaz direktori
+                  Muassasa direktori
                 </div>
                 <h3 className="text-3xl md:text-4xl font-black tracking-tight">
-                  Xudoyberdiyev Akram Rustamovich
+                  Xudoyberdiyev Akrom Rustamovich
                 </h3>
                 <div className="relative">
                   <Quote size={40} className="absolute -top-4 -left-6 opacity-20 text-white" />

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, useSpring, useInView } from "framer-motion";
-import { Stethoscope, HeartPulse, Activity, ArrowRight, Award, GraduationCap, ShieldCheck, ClipboardCheck } from "lucide-react";
+import { Stethoscope, HeartPulse, Activity, ArrowRight, Award, GraduationCap, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
 // CountUp Component for Stats
@@ -58,28 +58,28 @@ const Hero = () => {
         <motion.div 
           animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[15%] left-[5%] opacity-10 text-teal-400"
+          className="absolute top-[15%] left-[5%] opacity-[0.05] text-teal-400"
         >
           <Stethoscope size={80} />
         </motion.div>
         <motion.div 
           animate={{ y: [0, 25, 0], x: [0, -15, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-[20%] left-[15%] opacity-[0.08] text-white"
+          className="absolute bottom-[20%] left-[15%] opacity-[0.05] text-white"
         >
           <HeartPulse size={100} />
         </motion.div>
         <motion.div 
           animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="absolute top-[10%] right-[35%] opacity-[0.12] text-teal-500"
+          className="absolute top-[10%] right-[35%] opacity-[0.05] text-teal-500"
         >
           <Activity size={120} />
         </motion.div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
           
           {/* Left Column: Typography Enhancement */}
           <div className="space-y-10">
@@ -96,7 +96,7 @@ const Hero = () => {
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight">
+              <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight text-center lg:text-left">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-slate-400">
                   Tibbiyotda professional
                 </span>
@@ -105,9 +105,9 @@ const Hero = () => {
                 </span>
               </h1>
               
-              <p className="text-xl text-slate-400 leading-relaxed max-w-xl text-center lg:text-left">
+              <p className="text-xl text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
                 Davlat standartlariga moslashtirilgan 26 turdagi o&apos;quv dasturlari. 
-                Tibbiyot xodimlari uchun zamonaviy va amaliy bilimlarning yagona markazi.
+                Tibbiyot xodimlari uchun zamonaviy va amaliy bilimlar markazi.
               </p>
             </motion.div>
 
@@ -116,21 +116,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-5"
+              className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
             >
-              <a 
-                href="https://test.tibbiy-malaka.uz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-10 py-5 bg-gradient-to-r from-teal-600 to-teal-500 text-white font-black uppercase tracking-widest text-xs rounded-2xl shadow-2xl shadow-teal-900/40 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3"
-              >
-                <ClipboardCheck size={18} />
-                Kirish testini topshirish
-              </a>
-
               <button 
                 onClick={scrollToContact}
-                className="px-10 py-5 border-2 border-slate-700 text-white font-black uppercase tracking-widest text-xs rounded-2xl hover:bg-white/5 hover:border-slate-500 transition-all active:scale-95 flex items-center justify-center gap-3"
+                className="px-10 py-5 bg-gradient-to-r from-teal-600 to-teal-500 text-white font-black uppercase tracking-widest text-xs rounded-2xl shadow-2xl shadow-teal-900/40 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3"
               >
                 Konsultatsiya olish
                 <ArrowRight size={18} />
@@ -138,77 +128,55 @@ const Hero = () => {
             </motion.div>
 
             {/* 5. Stats Counter */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="grid grid-cols-3 gap-8 pt-10 border-t border-white/5"
-            >
-              <div className="space-y-1 text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start gap-2 text-[#C5A059]">
-                   <GraduationCap size={18} />
-                   <p className="text-2xl font-black text-white"><CountUp value={26} suffix="+" /></p>
-                </div>
-                <p className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Yo&apos;nalishlar</p>
-              </div>
-              <div className="space-y-1 text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start gap-2 text-[#C5A059]">
-                   <ShieldCheck size={18} />
-                   <p className="text-2xl font-black text-white"><CountUp value={100} suffix="%" /></p>
-                </div>
-                <p className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Litsenziya</p>
-              </div>
-              <div className="space-y-1 text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start gap-2 text-[#C5A059]">
-                   <Award size={18} />
-                   <p className="text-2xl font-black text-white">Premium</p>
-                </div>
-                <p className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Sifat darajasi</p>
-              </div>
-            </motion.div>
+            
           </div>
 
-          {/* 2. Right Side: Glassmorphism Card */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 1 }}
-            className="relative group lg:block hidden"
-          >
-            <div className="relative z-10 rounded-[2.5rem] overflow-hidden aspect-[4/5] backdrop-blur-[16px] saturate-[180%] bg-white/[0.05] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.05)] transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
-              
-              {/* Image with subtle overlay */}
-              <div className="absolute inset-0">
-                <Image 
-                  src="/images/models-1.jpg" 
-                  alt="Medical Training Center" 
-                  fill 
-                  className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
-                  onError={(e) => {
-                    (e.target as any).src = "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80";
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120] via-transparent to-transparent" />
-              </div>
+          {/* 2. Right Side: Clean Logo with Floating Badges */}
+          <div className="relative lg:flex hidden items-center justify-center py-20">
+            
+            {/* Logo with Glow and Animation */}
+            <motion.div
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="relative z-10"
+            >
+              <img 
+                src="/images/MALAKA_LOGO.png" 
+                alt="Tibbiy Malaka Logo"
+                className="w-full max-w-[320px] h-auto object-contain drop-shadow-[0_0_40px_rgba(212,175,55,0.3)]"
+              />
+            </motion.div>
 
-              {/* Floating Badge in Card */}
-              <div className="absolute bottom-8 left-8 right-8 p-6 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-teal-500 flex items-center justify-center shadow-lg shadow-teal-500/20">
-                    <Activity className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold">Amaliy ko&apos;nikmalar</h4>
-                    <p className="text-xs text-slate-400">Zamonaviy simulyatsiya markazi</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Floating Badges */}
+            <motion.div
+              animate={{ y: [0, -15, 0], x: [0, 5, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-[10%] right-[10%] z-20 px-3 py-1.5 rounded-full bg-teal-500/10 backdrop-blur-md border border-teal-500/20 shadow-lg shadow-teal-900/20"
+            >
+              <span className="text-[10px] font-bold text-teal-400 uppercase tracking-wider">26+ Yo&apos;nalish</span>
+            </motion.div>
 
-            {/* Decorative Back Gradients */}
-            <div className="absolute -top-10 -right-10 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl -z-10 group-hover:bg-teal-500/20 transition-colors" />
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10" />
-          </motion.div>
+            <motion.div
+              animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute bottom-[15%] left-[5%] z-20 px-3 py-1.5 rounded-full bg-emerald-500/10 backdrop-blur-md border border-emerald-500/20 shadow-lg shadow-emerald-900/20"
+            >
+              <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">100% Litsenziya</span>
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [0, -10, 0], x: [0, 15, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute bottom-[20%] right-[5%] z-20 px-3 py-1.5 rounded-full bg-amber-500/10 backdrop-blur-md border border-amber-500/20 shadow-lg shadow-amber-900/20"
+            >
+              <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Premium Sifat</span>
+            </motion.div>
+
+            {/* Background Decorative Gradients */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#C5A059]/5 rounded-full blur-[100px] -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px] -z-10" />
+
+          </div>
 
         </div>
       </div>

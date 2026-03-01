@@ -120,7 +120,7 @@ const License = () => {
                 <Award size={32} />
               </div>
               <div className="relative z-10">
-                <h4 className="font-bold text-lg mb-1 text-[#C5A059]">Oliy Toifali Markaz</h4>
+                <h4 className="font-bold text-lg mb-1 text-[#C5A059]">Rasmiy faoliyat</h4>
                 <p className="text-sm text-slate-400">Markazimiz davlat akkreditatsiyasidan o&apos;tgan.</p>
               </div>
             </div>
